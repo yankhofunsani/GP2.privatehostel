@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Records</title>
+    <link rel="stylesheet" href="/landrold.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="/mubas-logo.png" alt="logo">
+        </div>
+        <p class="p1">All Hostel Records</p>
+    </header>
+    
+    <table border="1" class="records-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Capacity</th>
+                <th>Price</th>
+                <th>Available Slots</th>
+                <th>Location</th>
+                <th>Owner</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% records.forEach(function(record) { %>
+            <tr>
+                <td><%= record.ID %></td>
+                <td><%= record.name %></td>
+                <td><%= record.category %></td>
+                <td><%= record.capacity %></td>
+                <td><%= record.price %></td>
+                <td><%= record.availableslots %></td>
+                <td><%= record.location %></td>
+                <td><%= record.owner %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
