@@ -1,0 +1,37 @@
+<div class="data-table">
+    <h2>Hostel Details</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Capacity</th>
+                <th>Price</th>
+                <th>Available Slots</th>
+                <th>Location</th>
+                <th>Owner</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (results.length > 0) { %>
+                <% results.forEach(detail => { %>
+                    <tr>
+                        <td><%= detail.ID %></td>
+                        <td><%= detail.name %></td>
+                        <td><%= detail.category %></td>
+                        <td><%= detail.capacity %></td>
+                        <td><%= detail.price %></td>
+                        <td><%= detail.availableslots %></td>
+                        <td><%= detail.location %></td>
+                        <td><%= detail.owner %></td>
+                    </tr>
+                <% }) %>
+            <% } else { %>
+                <tr>
+                    <td colspan="8">No data available</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</div>
