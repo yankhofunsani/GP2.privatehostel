@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Landlord Page</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/mubas-logo.png" alt="logo">
+        </div>
+        <p class="p1">Landlords page</p>
+    </header>
+
+    <div class="sidebar">
+        <a class="links" href="#">ALL HOSTELS</a>
+    </div>
+
+    <div class="main">
+        <div class="module">
+            <h2>Hostel Details</h2>
+            <table id="hostelTable" border="1">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Capacity</th>
+                        <th>Price</th>
+                        <th>Available Slots</th>
+                        <th>Location</th>
+                        <th>Owner</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Fetch data from the API
+        fetch('/api/landlord')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById('hostelTable').getElementsByTagName('tbody')[0];
+                tableBody.innerHTML = ''; // Clear existing content
+
+                if (data.length > 0) {
+                    data.forEach(detail => {
+                        const row = tableBody.insertRow();
+                        row.innerHTML = `
+                            <td>${detail.ID}</td>
+                            <td>${detail.name}</td>
+                            <td>${detail.category}</td>
+                            <td>${detail.capacity}</td>
+                            <td>${detail.price}</td>
+                            <td>${detail.availableslots}</td>
+                            <td>${detail.location}</td>
+                            <td>${detail.owner}</td>
+                        `;
+                    });
+                } else {
+                    const row = tableBody.insertRow();
+                    row.innerHTML = `<td colspan="8">No data available</td>`;
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
+</body>
+</html>
