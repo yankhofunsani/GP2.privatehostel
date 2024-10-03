@@ -3,10 +3,11 @@ body{
     margin:0;
 
 }
+
 .sidebar{
     
-        width: 15vw;
-        height: 100vh; 
+        width: 100vw;
+        height: 10vh; 
         background-color: rgb(37,33,94); 
         color: white;
         padding: 20px;
@@ -19,15 +20,189 @@ body{
     margin-top: 0;
     box-sizing: border-box;
     display: flex;
+    width:100vw;
+}
+.main{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
 }
 .logo{
     height:60%;
 
 }
-#p1{
+.p1{
     align-items: center;
     font-weight: bolder;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
     margin:auto;
+}
+.links{
+    color: white;
+    text-decoration:none;
+}
+.link:hover{
+    background-color: #efd898;
+    cursor: pointer;
+    box-shadow: #efd898;
+}
+
+.module{
+    background-color:rgba(0,0,0,0,0.5);
+    padding: 2rem;
+    display:none;
+}
+.module-show{
+    display:block;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 100dvw;
+    height:100dvh;
+    padding:10rem;
+    background-color:antiquewhite;
+    
+}
+.edit{
+    background-color: #efd898;
+    color: black;
+    
+}
+.form{
+   
+    font-size: medium;
+    border:5px;
+    max-width: 400px;
+    max-height: 70vh; 
+    margin: 0 auto; 
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+
+
+.records-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f0f8ff; 
+}
+
+.records-table th, .records-table td {
+    border: 1px solid #1e90ff; 
+    padding: 10px;
+    text-align: left;
+    color: #000;
+}
+
+
+.records-table th {
+    background-color: #1e90ff; 
+    color: white; 
+}
+
+.records-table tbody tr:hover {
+    background-color: #add8e6; 
+    cursor: pointer;
+}
+
+button {
+    background-color: #1e90ff; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+    margin: 10px ;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    max-height: 50px;
+
+}
+
+
+button:hover {
+    background-color: #4169e1; 
+    transform: translateY(-3px);
+}
+
+
+button:active {
+    transform: translateY(0); 
+    background-color: #104e8b; 
+}
+
+
+button.submit {
+    background-color: #32cd32; 
+}
+
+button.submit:hover {
+    background-color: #72d872; 
+}
+
+
+button.edit {
+    background-color: #ff8c00; 
+}
+
+button.edit:hover {
+    background-color: #e0a673; 
+}
+
+
+button.view-records {
+    background-color: #4682b4; 
+}
+
+button.view-records:hover {
+    background-color: #6ad9dd; 
+}
+
+.message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;     
+    height: 100%; 
+    width: 100%;        
+    text-align: center;      
+    padding: 20px;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.message h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #1e90ff;
+}
+.message p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 650px;
+}
+.lastdiv{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
 }

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/landrold.css">
+    <script src="/module.js" defer></script>
     <title>landlord</title>
 </head>
 <body>
@@ -11,15 +12,61 @@
         <div class="logo">
             <img src="/mubas-logo.png" alt="logo">
         </div>
-        <p id="p1">Landlords page</p>
+        <p class="p1">Landlords Portal</p>
     </header>
     <div class="sidebar " >
-      <p>hello world ya</p>
+      <a  class="links" href="#">MUBAS</a>
     </div>
 
-    <div class="main">
+    <div class="main"> 
+       <div class="module">
+            <div class="header">
+                <div class="logo">
+                    <img src="/mubas-logo.png" alt="logo">
+                </div>
+                <p class="P1">UPDATE HOSTEL INFORMATION</p>
+            </div>
+            <form class="form" action="/landlord" method="post">
+                
+                <label for="name">Name</label>
+                <input type="text"  name="name" ><br><br>
+                <label for="category">Category</label>
+                <input type="text"  name="category" ><br><br>
+                <label for="">capacity</label>
+                <input type="number"  name="capacity" ><br><br>
+                <label for="price">price</label>
+                <input type="number"  name="price" ><br><br>
+                <label for="availableslots">availableslots:</label>
+                <input type="number"  name="availableslots" ><br><br>
+                <label for="location">Location</label>
+                <input type="text"  name="location" ><br><br>
+                <label for="owner">Owner</label>
+                <input type="text" name="owner"><br><br>
+                <label for="id">HostelID</label>
+                <input type="number" name="id" ><br><br>
+                <button class="submit" type="submit">update</button>
+             
+         </form>
+        </div>
 
-    </div>
-    
+       <div class="message">
+        <h2>Welcome, Esteemed Landlord!</h2>
+        <p>
+           Thank you for partnering with us to provide comfortable accommodations to our students.
+           Your dedication and commitment help create a safe and nurturing environment for their academic journey. 
+           We're here to support you every step of the way. Whether you're updating your hostel details or checking available slots, 
+           we've made it easy and convenient for you.
+           Let’s make great things happen together!
+        </p>
+        </div>
+       <br><br>
+       <div class="lastdiv">
+       <button class="edit">Edit</button>
+       <button onclick="window.location.href='/landlord/records';" class="view-records">View Hostel Records</button>
+       </div>
+    </div> 
+ <footer>
+         
+ </footer>    
 </body>
 </html>
